@@ -9,7 +9,6 @@ function Login(){
         return(<div>
             
         </div>)
-        console.log('Login Success:', res.profileObj);
     }
     const onFailure = (res) =>{
         console.log('Login Failed:', res);
