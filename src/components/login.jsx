@@ -24,16 +24,14 @@ function Login() {
         <h1 className="title" style={{ fontSize: '30px' }}>Log in with</h1>
         <div className="social-login">
           <div className="social-login-element">
-            { 
-            }
             <GoogleLogin
+              className="social-login-element-google"
               clientId={clientId}
               buttonText="Google"
               onSuccess={onSuccess}
               onFailure={onFailure}
               cookiePolicy={'single_host_origin'}
               isSignedIn={true}
-              style ={{ backgroundColor: '#fff', color: '#000' }}
             />
           </div>
           <div className="social-login-element">

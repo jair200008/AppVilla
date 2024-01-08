@@ -63,7 +63,7 @@ body {
 .social-login-element {
     width: 12.5rem;
     height: 3.75rem;
-    font-size: 1.2rem;
+    font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.5px;
     border-radius: 5px;
@@ -71,22 +71,38 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
+    color: rgb(148, 145, 145);
     background: white;
 }
 
+.social-login-element-google{
+    width: 12.5rem;
+    height: 3.75rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-radius: 20px;
+    border: 1px solid var(--button-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+
 .social-login-element img {
-    width: 1.875rem;
-    height: 1.875rem;
+    width: 1.5rem;
+    height: 1.5rem;
     position: relative;
     top: 0;
-    left: -0.625rem;
+    left: -0.925rem;
 }
 
 .social-login-element:hover {
-    background-color: #fff;
-    color: black;
+    background-color: #af5f4b;
+    color: white;
 }
+
 
 .login-info-container > p {
     font-size: 1.25em;
