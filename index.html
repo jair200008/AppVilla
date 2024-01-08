@@ -1,78 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="function.js"></script>
-    <link rel="stylesheet" href="src/App.css">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
-</head>
-<body>
-    <div class="bandera">
-        <a href="indexES.html"><img src="src/img/colombia.png" alt=""></a>
-    </div>
-      <div class="login-container">
-          <div class="login-info-container">
-            <h1 class="title" style="font-size:30px;">Log in with</h1>
-
-            <div class="social-login">
-                <div class="social-login-element">
-                    <!--
-                        <button id="google-signin-button">
-                    </button>
-                    --> 
-                    <img src="src/img/google.svg" alt="google-image">
-                    <span >Google</span>
-                </div>
-                <div class="social-login-element">
-                    <img src="src/img/facebook.svg" alt="facebook-image">
-                    <span>Facebook</span>
-                </div>
-            </div>
-            <p>or</p>
-            <form class="inputs-container">
-                <input class="input" type="text" placeholder="Username">
-                <input class="input" type="password" placeholder="Password">
-                <p>Forgot password? <span class="span">Click here</span></p>
-                <button class="btn">login</button>
-                <p>Don't have an account? <span class="span">Sign Up</span></p>
-            </form>
-          </div>
-            <img class="image-container" src="src/img/login.svg" alt="">
-      </div>
-      <script src="https://apis.google.com/js/platform.js" async defer></script>
-<script>
-  function onSignIn(googleUser) {
-    // Callback cuando el usuario hace clic en el botón de inicio de sesión con Google
-    var profile = googleUser.getBasicProfile();
-    console.log('ID: 809188169045-fk7d1hqogk3fbm3692fpognmj96717lp.apps.googleusercontent.com' + profile.getId()); // ID único del usuario
-    console.log('Nombre: Juan Manuel Malaver' + profile.getName()); // Nombre del usuario
-    console.log('Email: juanmalaver1511@gmail.com' + profile.getEmail()); // Email del usuario
-    // Puedes utilizar esta información para iniciar sesión en tu aplicación
-  }
-
-  function signOut() {
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-      console.log('Usuario ha cerrado sesión.');
-    });
-  }
-
-  // Configuración del botón de inicio de sesión con Google
-  function renderButton() {
-    gapi.signin2.render('google-signin-button', {
-      'scope': 'email', // Ámbito solicitado para obtener el correo electrónico
-      'width': 200,
-      'height': 40,
-      'longtitle': true,
-      'theme': 'dark',
-      'onsuccess': onSignIn, // Callback en caso de inicio de sesión exitoso
-    });
-  }
-</script>
-<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-
-</body>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
