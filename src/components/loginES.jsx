@@ -1,9 +1,8 @@
 import { GoogleLogin } from "react-google-login";
-import { useHistory } from 'react-router-dom';
 import "../styles/styles.css";
 const clientId = "72464211646-0hiu8ls489tmfvm6dqcn8ut4323hrith.apps.googleusercontent.com";
 
-function Login() {
+function loginES() {
   const onSuccess = (res) => {
     alert('Login Success:');
     // Realiza las acciones necesarias después de un inicio de sesión exitoso
@@ -14,15 +13,15 @@ function Login() {
     // Realiza las acciones necesarias después de un inicio de sesión fallido
   };
 
+
+
   return (
-      <div className="login-container">
+    <div className="login-container">
       <div className="login-info-container">
         <div className="bandera">
-            <a href="/src/components/loginES.html">
-                <img src="/img/colombia.png" alt="" ></img>
-            </a>
+            <img src="/img/estados-unidos.png" alt=""/>
         </div>
-        <h1 className="title" style={{ fontSize: '30px' }}>Log in with</h1>
+        <h1 className="title" style={{ fontSize: '30px' }}>Iniciar sesión con</h1>
         <div className="social-login">
           <div className="social-login-element">
             <GoogleLogin
@@ -40,13 +39,13 @@ function Login() {
             <span>Facebook</span>
           </div>
         </div>
-        <p>or</p>
+        <p>o</p>
         <form className="inputs-container">
-          <input className="input" type="text" placeholder="Username" />
-          <input className="input" type="password" placeholder="Password" />
-          <p>Forgot password? <span className="span">Click here</span></p>
+          <input className="input" type="text" placeholder="Usuario" />
+          <input className="input" type="password" placeholder="Contraseña" />
+          <p>¿Ha olvidado su contraseña? <span className="span">Pulse aquí</span></p>
           <button className="btn">login</button>
-          <p>Don't have an account? <span className="span"> <a href="/src/components/formRegister.html" className="span">Sign Up</a></span></p>
+          <p>¿No tiene cuenta?<span className="span"> Inscribirse</span></p>
         </form>
       </div>
       <img className="image-container" src="/img/login.svg" alt="" />
@@ -54,4 +53,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default loginES;

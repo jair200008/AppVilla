@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-
 :root {
     --login-bg:#f1f1f1ee;
     --title-bg: #af5f4b;
@@ -29,7 +28,7 @@ body {
 }
 
 .login-info-container {
-    width: 90%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,7 +45,6 @@ body {
 }
 
 .title {
-    margin-top: 10px;
     text-transform: capitalize;
     font-size: 2.25rem;
     font-weight: 600;
@@ -62,10 +60,9 @@ body {
 }
 
 .social-login-element {
-    margin-bottom: 15px;
     width: 12.5rem;
     height: 3.75rem;
-    font-size: 13px;
+    font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: 0.5px;
     border-radius: 5px;
@@ -73,44 +70,23 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(148, 145, 145);
-    background: white;
 }
-
-.social-login-element-google{
-    width: 12.5rem;
-    height: 3.75rem;
-    font-size: 1.2rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    border-radius: 20px;
-    border: 1px solid var(--button-bg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
-}
-
 
 .social-login-element img {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.875rem;
+    height: 1.875rem;
     position: relative;
     top: 0;
-    left: -0.925rem;
+    left: -0.625rem;
 }
 
 .social-login-element:hover {
-    background-color: #af5f4b;
-    color: white;
+    background-color: #fff;
 }
-
 
 .login-info-container > p {
     font-size: 1.25em;
     margin-top: 1.5em;
-    color: black;
-    flex-direction: column;
 }
 
 .inputs-container {
@@ -120,7 +96,6 @@ body {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    color: black;
 }
 
 .input, .btn {
@@ -130,15 +105,12 @@ body {
 }
 
 .input {
-    margin-bottom: 20px;
     padding-left: 20px;
     border: none;
     border-radius: 5px;
     font-weight: 600;
     letter-spacing: 1px;
     box-sizing: border-box;
-    background: #fff;
-    color: black;
 }
 
 .input:hover {
@@ -146,8 +118,6 @@ body {
 }
 
 .btn {
-    margin-bottom: 5px;
-    margin-top: 5px;
     width: 80%;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -177,12 +147,11 @@ body {
 
 @media screen and (max-width: 1000px) {
     .login-container {
-        min-width: 110%;
+        width: 70%;
         margin-top: 3rem;
-        margin-left: -15px;
     }
     .login-info-container {
-        min-width: 100%;
+        width: 100%;
         border-radius: 5px;
     }
     
