@@ -10,12 +10,14 @@
 }
 
 body {
+    margin-top: 10px;
     height: 100vh;
     font-family: 'Poppins', sans-serif;
-    background-image: linear-gradient(to top, #af5f4b 0%, #793e08cc 100%);
+
 }
 
 .login-container {
+    border: 2px solid #ccc;
     height: 43.75em;
     width: 60em;
     margin: 6em auto;
@@ -24,12 +26,13 @@ body {
     justify-content: space-between;
     overflow: hidden;
     transition: transform 0.7s ease-in-out;
-  transform: translateY(-40px);
+    transform: translateY(-40px);
 
 }
 
 .login-info-container {
     width: 90%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -183,7 +186,13 @@ body {
     }
     .login-info-container {
         min-width: 100%;
+        min-height: 100%;
         border-radius: 5px;
+    }
+    .login-info-container p{
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 20px;
     }
     
     .image-container {
@@ -209,6 +218,7 @@ body {
     }
 
     .login-info-container > p {
+        margin-top: 10px;
         margin: 0;
     }
 }

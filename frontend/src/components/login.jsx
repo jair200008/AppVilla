@@ -1,28 +1,48 @@
+import React, { useState } from 'react';
 import { GoogleLogin } from "react-google-login";
-import { useHistory } from 'react-router-dom';
 import "../styles/styles.css";
+import { useNavigate } from 'react-router-dom';
 const clientId = "72464211646-0hiu8ls489tmfvm6dqcn8ut4323hrith.apps.googleusercontent.com";
 
-function Login() {
+
+function Login(){
+  const navigate = useNavigate();
+  const [userName, setUserName] = useState('');
+
+  const redirectES = () => {
+    navigate('/loginES')
+  };
+  // Inicio de sesion
   const onSuccess = (res) => {
-    alert('Login Success:');
-    // Realiza las acciones necesarias después de un inicio de sesión exitoso
+    if (res && res.profileObj && res.profileObj.givenName) {
+      const name = res.profileObj.givenName;
+      setUserName(name);
+      navigate('/home', { state: { userName: name } });
+    } else {
+      console.log('User named no found');
+    }
   };
 
   const onFailure = (res) => {
-    console.log('Login Failed:', res);
-    // Realiza las acciones necesarias después de un inicio de sesión fallido
+    if(res){
+      console.log('Logout Success:', res);
+    }else{
+      //navigate('/')// Aca redirigimos a la pantalla de home despues de ingresar con google (JuanMa)
+    }
+  };
+
+  const redirectFormRegister =() =>{
+    navigate('/formRegister')
   };
 
   return (
       <div className="login-container">
       <div className="login-info-container">
         <div className="bandera">
-            <a href="/src/components/loginES.html">
-                <img src="/img/colombia.png" alt="" ></img>
-            </a>
+            <img src="/img/colombia.png" alt="" onClick={redirectES} style={{cursor: 'pointer'}}></img>
         </div>
         <h1 className="title" style={{ fontSize: '30px' }}>Log in with</h1>
+        
         <div className="social-login">
           <div className="social-login-element">
             <GoogleLogin
@@ -40,13 +60,16 @@ function Login() {
             <span>Facebook</span>
           </div>
         </div>
+        <div className="imgHombre animate__animated animate__backInLeft">
+        <img src="/img/hombre.png" alt="" />
+        </div>
         <p>or</p>
         <form className="inputs-container">
           <input className="input" type="text" placeholder="Username" />
           <input className="input" type="password" placeholder="Password" />
           <p>Forgot password? <span className="span">Click here</span></p>
           <button className="btn">login</button>
-          <p>Don't have an account? <span className="span"> <a href="/src/components/formRegister.html" className="span">Sign Up</a></span></p>
+          <p>Don't have an account? <span className="span" onClick={redirectFormRegister}>Sign Up</span></p>
         </form>
       </div>
       <img className="image-container" src="/img/login.svg" alt="" />

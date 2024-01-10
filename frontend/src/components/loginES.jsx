@@ -9,7 +9,7 @@ function loginES() {
   };
 
   const onFailure = (res) => {
-    console.log('Login Failed:', res);
+    console.log('Has salido:', res);
     // Realiza las acciones necesarias después de un inicio de sesión fallido
   };
 
