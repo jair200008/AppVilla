@@ -178,6 +178,47 @@ body {
     width: 30px;
 }
 
+/* estilos de Pagina Restaurante.css */
+.navContainer {
+    display: flex; /* Utiliza flexbox para alinear elementos en la misma línea */
+    align-items: center; /* Centra verticalmente los elementos en el contenedor */
+    background-color: #333; /* Color de fondo para el contenedor del nav */
+    padding: 10px; /* Espaciado interno */
+  }
+  
+  .iconHouse {
+    margin-right: 20px; /* Espaciado entre la imagen y las opciones de navegación */
+  }
+  
+  .iconHouse img {
+    background-color: white;
+    border-radius: 10px;
+    width: 50px; /* Ajusta el tamaño de la imagen */
+  }
+  
+  .navOptions {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    margin: 0;
+    padding: 0;
+    margin-left: 70%;
+  }
+  
+  .navOptions li {
+    display: inline-block; /* Muestra los elementos de la lista en línea */
+    margin-right: 10px; /* Espaciado entre elementos de la lista */
+  }
+  
+  .navOptions a {
+    text-decoration: none; /* Elimina la decoración del enlace */
+    color: white; /* Color del texto del enlace */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 16px; /* Tamaño del texto */
+  }
+  
+  .navOptions a:hover {
+    color: #ffcc00; /* Cambia el color del texto al pasar el ratón sobre el enlace */
+  }
+
 @media screen and (max-width: 1000px) {
     .login-container {
         min-width: 110%;
