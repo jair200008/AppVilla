@@ -1,0 +1,170 @@
+/* Home.css */
+
+/* Contenedor principal */
+.home-container {
+  border: 3px solid #979696;
+  background: rgb(239, 237, 237);
+  max-width: 800px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  padding: 20px; /* Relleno alrededor del contenido */
+  border-radius: 10px;
+}
+
+/* Barra de búsqueda */
+.search-bar {
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.principal{
+  font-size: 20px;
+  width: 100%;
+  height: 40px;
+  margin-top: 15px;
+  text-align: left;
+}
+.principal img{
+  width: 30px;
+  margin-bottom: 50px;
+}
+
+
+.search-bar input {
+  padding: 8px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  width: 300px;
+  flex-grow: 1;
+}
+
+.search-bar button {
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  width: 150px; /* Establecer un ancho específico para el botón */
+}
+
+/* Imagen principal */
+.home-image {
+  max-width: 40%; /* Cambia el ancho máximo de la imagen al 50% del contenedor */
+  height: auto;
+  margin: 0 auto; /* Centra la imagen horizontalmente */
+  display: block; /* Asegura que la imagen sea un elemento de bloque */
+  margin-bottom: 20px;
+}
+
+/* Contenedores de los objetivos */
+.targets {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px; 
+}
+
+.target {
+  padding: 5px;
+  border: 1px solid #9a5019;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/*Icono de salir*/
+.custom-google-logout-button{
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  margin-right: 90%;
+}
+
+.custom-google-logout-button svg {
+  display: none;
+}
+.notification{
+  width: 40px;
+  margin-left: 88%;
+  margin-top: -80px;
+}
+
+/*Estilos de las targetas*/
+.img-target{
+  width: 100%;
+  height: 100%;
+}
+
+/* Media queries para hacer la interfaz responsive */
+
+/* Para pantallas más pequeñas (max-width: 768px) */
+@media (max-width: 768px) {
+  body{
+    margin-top: 0px;
+  }
+  .home-container {
+    border-radius: 0px;
+    padding: 10px; /* Reduce el relleno */
+  }
+
+  .search-bar {
+    flex-direction: column; /* Cambia a un diseño de columna */
+    margin-bottom: 15px;
+  }
+
+
+  .search-bar input {
+    width: 90%;
+    margin-right: 0; /* Elimina el margen derecho del campo de entrada */
+    margin-bottom: 10px; /* Agrega un espacio debajo del campo de entrada */
+  }
+  
+  .search-bar button {
+    width: 50%;
+    border-radius: 15px; /* El botón ocupa el ancho completo */
+  }
+  .targets {
+    grid-template-columns: repeat(2, 1fr); /* Cambia a dos columnas */
+  }
+  .target {
+    margin-top: 30px;
+    margin: 0 auto;
+    padding: 0px;
+    border: 2px solid #9a5019;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+  }
+  .img-target{
+    border-radius: 8px;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .principal{
+    font-size: 15px;
+  }
+  .principal img{
+    width: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+/* Para pantallas más pequeñas aún (max-width: 480px) */
+@media (max-width: 480px) {
+  .home-container {
+    border-radius: 0px;
+    max-width: 95%; /* Ancho máximo del contenedor reducido */
+  }
+
+}
