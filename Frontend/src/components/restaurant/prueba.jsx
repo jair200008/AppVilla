@@ -1,6 +1,10 @@
-function Prueba(){
-    return(
-        <div>Nuevo componente</div>
-    )
+import React, { Component } from "react";
+
+export default class Prueba extends Component{
+
+    render(){
+        return(
+            <div>Hola ya pude ❤️</div>
+        );
+    }
 }
-export default Prueba;

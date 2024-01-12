@@ -1,8 +1,8 @@
 // eslint-disable-next-line no-unused-vars
-import React from 'react';
+import React, { useState }  from 'react';
 import '../styles/home.css'; 
 import {GoogleLogout } from "react-google-login";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import 'animate.css';
 
@@ -13,7 +13,6 @@ const Home = () => {
   const location = useLocation();
 
   const userName = location.state && location.state.userName ? location.state.userName : '';
-
 
   const onSuccess = () => {
     console.log('Saliste correctamente');
@@ -47,10 +46,12 @@ const Home = () => {
       />
       <div className="targets">
         <div className="target">
-          <img src="/img/restaurant1.jpg" alt="Imagen"className="img-target" onClick={redirectToRestaurant}/>
+          <img src="/img/restaurant1.jpg" alt="Imagen"className="img-target" onClick={redirectToRestaurant} />
         </div>
         <div className="target">
-          <img src="/img/restaurant2.jpg" alt="Imagen"className="img-target"/>
+          <Link to= "/componentRestaurant">
+            <img src="/img/restaurant2.jpg" alt="Imagen"className="img-target"/>
+          </Link>
         </div>
         <div className="target">
           <img src="/img/restaurant2.jpg" alt="Imagen"className="img-target"/>

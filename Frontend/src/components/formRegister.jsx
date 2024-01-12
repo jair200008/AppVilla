@@ -41,6 +41,7 @@ function FormRegister() {
             <img src="/img/registro-en-linea.png" alt="" />
             <form className="inputs-container" method="post">
               <input className="input" type="text" placeholder="Username" />
+              <input className="input" type="email" placeholder="Email" />
               <input className="input" type="password" placeholder="Password" ref={passwordRef} />
               <input className="input" type="password" placeholder="Confirm Password" ref={confirmPasswordRef} />
               <button className="btn" onClick={(e) => {
