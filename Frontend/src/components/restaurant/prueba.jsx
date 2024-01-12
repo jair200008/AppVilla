@@ -4,7 +4,7 @@ export default class Prueba extends Component{
 
     render(){
         return(
-            <div>Holaa ya pude ❤️</div>
+            <div>Hola ya pude ❤️</div>
         );
     }
 }

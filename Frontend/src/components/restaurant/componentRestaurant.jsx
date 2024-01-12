@@ -39,7 +39,7 @@ const PageRestaurant = () => {
               <Link to="/componentRestaurant/prueba">Opcion 3</Link>
             </li>
             <li>
-              <Link to="/componentRestaurant/prueba">Llamar componente</Link>
+              <Link to="/componentRestaurant/prueba">Llamar nuevo componente</Link>
             </li>
           </ul>
         </nav>
