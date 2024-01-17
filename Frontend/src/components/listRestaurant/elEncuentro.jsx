@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 
 class ElEncuentro extends Component {
-  showModal = (title, imageSrc, price) => {
+  showModal = (title, imageSrc, price, description) => {
     document.getElementById("modalTitle").textContent = title;
     document.getElementById("modalImage").src = imageSrc;
     document.getElementById("modalPrice").textContent = price;
+    document.getElementById("modalDescrip").textContent = description;
     document.getElementById("myModal").style.display = "flex";
   };
 
@@ -13,8 +14,13 @@ class ElEncuentro extends Component {
   };
 
   addToCart = () => {
-    // Agregar lógica para añadir el producto al carrito
-    alert("Producto agregado al carrito");
+    let cantidad = document.getElementById("quantity").value;
+    if (cantidad > 0) {
+      alert("Producto agregado al carrito: " + cantidad);
+      
+    } else {
+      alert("Cantidad inválida");
+    }
     this.closeModal();
   };
 
@@ -24,7 +30,14 @@ class ElEncuentro extends Component {
         <h1>Bienvenido al Restaurante El Encuentro</h1>
         <div
           className="menu-card"
-          onClick={() => this.showModal("Postre", "/img/postre.jpg", "15.99")}
+          onClick={() =>
+            this.showModal(
+              "Postre",
+              "/img/postre.jpg",
+              "$15.99",
+              "Descripcion del plato. Lorem ipsum"
+            )
+          }
         >
           <img src="/img/postre.jpg" alt="" />
           <div className="menu-details">
@@ -38,8 +51,15 @@ class ElEncuentro extends Component {
         </div>
         {/*----------------*/}
         <div
-            className="menu-card"
-            onClick={() => this.showModal("Burritos Mexicanos", "/img/tacos.jpg", "15.99")}
+          className="menu-card"
+          onClick={() =>
+            this.showModal(
+              "Burritos Mexicanos",
+              "/img/tacos.jpg",
+              "$15.99",
+              "Descripción del plato 1. Lorem ipsum dolor sit amet, consectetur"
+            )
+          }
         >
           <img src="/img/tacos.jpg" alt="" />
           <div className="menu-details">
@@ -103,16 +123,39 @@ class ElEncuentro extends Component {
         {/*Modal*/}
         <div className="modal" id="myModal">
           <div className="modal-content">
-            <span onClick={this.closeModal} style={{position:'absolute', top:'10px', right:'10px', fontSize:'24px', cursor:'pointer'}}>&times;</span>
+            <span
+              onClick={this.closeModal}
+              style={{
+                position: "absolute",
+                top: "10px",
+                right: "10px",
+                fontSize: "24px",
+                cursor: "pointer",
+              }}
+            >
+              &times;
+            </span>
             <img id="modalImage" src="" alt="Comida" />
             <h2 id="modalTitle"></h2>
+            <p id="modalDescrip"></p>
             <p id="modalPrice"></p>
             <div className="modal-buttons">
+              <input
+                type="number"
+                id="quantity"
+                min={1}
+                value={1}
+                style={{
+                  fontSize: "15px",
+                  textAlign: "center",
+                  width: "100px",
+                }}
+              ></input>
               <button className="cancel" onClick={this.closeModal}>
                 Seguir comprando
               </button>
               <button className="add-to-cart" onClick={this.addToCart}>
-                Agregar
+                Agregar y Comprar
               </button>
             </div>
           </div>
