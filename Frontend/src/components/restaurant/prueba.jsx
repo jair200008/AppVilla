@@ -4,7 +4,9 @@ export default class Prueba extends Component{
 
     render(){
         return(
-            <div>Hola ya pude ❤️</div>
+            <div>
+                <h1>Esta es la pagina para hacer compras 🛒</h1>
+            </div>
         );
     }
 }

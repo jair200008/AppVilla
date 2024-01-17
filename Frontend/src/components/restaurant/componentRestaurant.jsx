@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faHouse } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import Prueba from "./prueba";
 import REncuentro from "../listRestaurant/elEncuentro";
 
@@ -23,14 +23,14 @@ const PageRestaurant = () => {
     <div>
       <div className="navContainer">
         <div className="iconHouse">
-          <Link to="/home">
-            <FontAwesomeIcon icon={faHouse} style={{color: "black"}} />
+          <Link to="/componentRestaurant/prueba">
+            <FontAwesomeIcon icon={faCartShopping} style={{color: "black"}} />
           </Link>
         </div>
         <nav id="nav">
           <ul className="navOptions">
             <li>
-              <Link to="/componentRestaurant/prueba">Opcion 1</Link>
+              <Link to="/home">Ir a Home</Link>
             </li>
             <li>
               <Link to="/componentRestaurant/prueba">Opcion 2</Link>
