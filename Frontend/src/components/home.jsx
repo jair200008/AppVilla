@@ -38,12 +38,64 @@ const Home = () => {
         <input type="search" placeholder="Busca tu restaurante favorito" />
         <button>Buscar</button>
       </div>
-
-      <img
+     {/* 
+           <img
         src="/img/hamburguesa.png"
         alt="Imagen"
         className="home-image animate__animated animate__backInLeft"
       />
+     */}
+
+      {/* Carrucel */}
+      <section className="coleccion" id="patro">
+        <div className="slider">
+            <div class="slide-track">
+                <div className="slide">
+                    <img src="/img/hamburguesa.png" alt="" />
+                </div>
+                <div className="slide">
+                    <img src="/img/pizza.png" alt="" />
+                </div>
+                <div className="slide">
+                    <img src="/img/postre.png" alt="" />
+                </div>
+                <div className="slide">
+                    <img src="/img/tacos.png" alt="" />
+                </div>
+                <div className="slide">
+                    <img src="/img/postre.png" alt="" />
+                </div>
+                <div className="slide">
+                    <img src="/img/vino.png" alt="" />
+                </div>
+                <div className="slide">
+                    <img src="/img/limonada.png" alt="" />
+                </div>
+
+                <div className="slide">
+                    <img src="/img/hamburguesa.png" alt="" />
+                </div>
+                <div className="slide">
+                    <img src="/img/hamburguesa.png" alt="" />
+                </div>
+                <div className="slide">
+                    <img src="/img/hamburguesa.png" alt="" />
+                </div>
+                <div className="slide">
+                    <img src="/img/hamburguesa.png" alt="" />
+                </div>
+                <div className="slide">
+                    <img src="/img/hamburguesa.png" alt="" />
+                </div>
+                <div className="slide">
+                    <img src="/img/hamburguesa.png" alt="" />
+                </div>
+                <div className="slide">
+                    <img src="/img/hamburguesa.png" alt="" />
+                </div>
+            </div>
+        </div>
+    </section>
       <div className="targets">
         <div className="target">
           <img src="/img/restaurant1.jpg" alt="Imagen"className="img-target" onClick={redirectToRestaurant} />
