@@ -24,10 +24,17 @@ class ElEncuentro extends Component {
     this.closeModal();
   };
 
+  state = {
+    cantidad: 1,
+  };
+
   render() {
     return (
       <div className="containerText">
         <h1>Bienvenido al Restaurante El Encuentro</h1>
+
+        <div className="menu-container">
+
         <div
           className="menu-card"
           onClick={() =>
@@ -119,6 +126,8 @@ class ElEncuentro extends Component {
             <p class="price">$15.99</p>
           </div>
         </div>
+        </div>
+        
 
         {/*Modal*/}
         <div className="modal" id="myModal">
@@ -144,7 +153,8 @@ class ElEncuentro extends Component {
                 type="number"
                 id="quantity"
                 min={1}
-                value={1}
+                value={this.state.cantidad}
+                onChange={(e) => this.setState({ cantidad: Math.max(1, +e.target.value) })}
                 style={{
                   fontSize: "15px",
                   textAlign: "center",

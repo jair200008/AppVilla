@@ -2,7 +2,7 @@ import React from "react";
 import { Link, Route, Routes } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faCartShopping } from '@fortawesome/free-solid-svg-icons';
-import Prueba from "./prueba";
+import Prueba from "./carrito";
 import REncuentro from "../listRestaurant/elEncuentro";
 
 const PageRestaurant = () => {
