@@ -1,9 +1,11 @@
-import React from "react";
+import React, { lazy, Suspense } from 'react';
 import { Link, Route, Routes } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faCartShopping } from '@fortawesome/free-solid-svg-icons';
-import Prueba from "./carrito";
 import REncuentro from "../listRestaurant/elEncuentro";
+import Filtro from '../listRestaurant/filtro';
+
+const Carrito = lazy(() => import('./carrito'));
 
 const PageRestaurant = () => {
   let menuVisible = false;
@@ -23,7 +25,7 @@ const PageRestaurant = () => {
     <div>
       <div className="navContainer">
         <div className="iconHouse">
-          <Link to="/componentRestaurant/prueba">
+          <Link to="/componentRestaurant/carrito">
             <FontAwesomeIcon icon={faCartShopping} style={{color: "black"}} />
           </Link>
         </div>
@@ -33,13 +35,13 @@ const PageRestaurant = () => {
               <Link to="/home">Ir a Home</Link>
             </li>
             <li>
-              <Link to="/componentRestaurant/prueba">Opcion 2</Link>
+              <Link to="/componentRestaurant/carrito">Opcion 2</Link>
             </li>
             <li>
-              <Link to="/componentRestaurant/prueba">Opcion 3</Link>
+              <Link to="/componentRestaurant/carrito">Opcion 3</Link>
             </li>
             <li>
-              <Link to="/componentRestaurant/prueba">Llamar nuevo componente</Link>
+              <Link to="/componentRestaurant/carrito">Llamar nuevo componente</Link>
             </li>
           </ul>
         </nav>
@@ -47,9 +49,12 @@ const PageRestaurant = () => {
           <FontAwesomeIcon icon={faBars} />
         </div>
       </div>
+        <div>
+          <Filtro></Filtro>
+        </div>
       <Routes>
         <Route path="/" element={<REncuentro />} />
-        <Route path="/prueba" element={<Prueba />} />
+        <Route path="/carrito" element={<Suspense fallback={<div>Loading...</div>}><Carrito /></Suspense>} />
       </Routes>
     </div>
   );

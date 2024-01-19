@@ -237,6 +237,11 @@ body {
     margin-top: 60px;
     text-align: center;
 }
+.containerText h1{
+    margin-left: 15%;
+    text-align: center;
+    margin-top: -550px;
+}
 
 /*Carrusel*/
 .slider {
@@ -263,9 +268,11 @@ body {
 }
 
 /*Estilos targetas de menu*/
-
+.menu-container{
+    margin-left: 28%;
+}
 .menu-card {
-
+    width: 80%;
     display: flex;
     margin: 20px;
     background-color: #fff;
@@ -306,6 +313,47 @@ body {
   .price {
     font-weight: bold;
     color: #27ae60;
+  }
+
+/*Filtro*/
+.filtro {
+    background-color: rgb(240, 238, 237);
+    padding: 20px;
+    border-radius: 5px;
+    margin: 58px 5px;
+    max-width: 300px;
+    border: #f8bb12 2px solid;
+    color: black;
+  }
+
+  .filtro img{
+    padding: 8px;
+    margin-left: 15px;
+    width: 250px;
+    border-radius: 30px;
+  }
+  .filtro h1 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .filtro input {
+    margin-left: 10px;
+    width: 90%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #bbbaba;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .filtro input::placeholder {
+    color: #aaa;
+  }
+  .filtro input:hover{
+    background-color: #f8bb12;
   }
 /*Modal de compra y agregar al carrito*/
 .modal {
@@ -513,8 +561,14 @@ nav.responsive ul li {
       .containerText h1{
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         font-size: 20px;
+        margin-left: 25px;
+        text-align: center;
+        margin-top: -55px;
       }
       /*Responsive targetas*/
+      .menu-container{
+        margin-left: 0%;
+    }
       .menu-card {
         width: 90%;
         display: flex;
@@ -525,6 +579,35 @@ nav.responsive ul li {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         cursor: pointer;
         border: 2px solid #ddd;
+      }
+      /*Filtro*/
+      .filtro-container{
+        overflow-x: auto;
+      }
+      .filtro{
+        margin-bottom: 10px;
+        border: none;
+        background-color: #fff;
+        padding: 10px;
+        justify-content: space-between; /* Alinea los elementos a los extremos */
+        display: flex; /* Muestra los elementos en forma de fila */
+        width: 500%; /* Ocupa el 100% del ancho de la pantalla */
+        z-index: 1000;
+      }
+      .filtro img{
+        display: none;
+      }
+      .filtro h1{
+        display: none;
+      }
+      .filtro input{
+        text-align: center;
+        font-size: 13px;
+        color: white;
+        margin-right: 10px;
+        width: 160px;
+        height: 30px;
+        list-style-type: none;
       }
 }
 

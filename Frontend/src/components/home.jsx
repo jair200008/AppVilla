@@ -49,7 +49,7 @@ const Home = () => {
       {/* Carrucel */}
       <section className="coleccion" id="patro">
         <div className="slider">
-            <div class="slide-track">
+            <div className="slide-track">
                 <div className="slide">
                     <img src="/img/hamburguesa.png" alt="" />
                 </div>
