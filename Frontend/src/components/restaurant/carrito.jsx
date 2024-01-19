@@ -6,6 +6,7 @@ export default class Carrito extends Component{
         return(
             <div><br /><br />
                 <h1>Esta es la pagina para hacer compras 🛒</h1>
+                <h2>Quitar el filtro</h2>
             </div>
         );
     }
