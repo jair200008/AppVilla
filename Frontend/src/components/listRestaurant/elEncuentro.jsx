@@ -32,9 +32,7 @@ class ElEncuentro extends Component {
     return (
       <div className="containerText">
         <h1>Bienvenido al Restaurante El Encuentro</h1>
-
         <div className="menu-container">
-
         <div
           className="menu-card"
           onClick={() =>
@@ -75,7 +73,7 @@ class ElEncuentro extends Component {
               Descripción del plato 1. Lorem ipsum dolor sit amet, consectetur
               adipiscing elit.
             </p>
-            <p class="price">$15.99</p>
+            <p className="price">$15.99</p>
           </div>
         </div>
         {/*----------------*/}
@@ -87,7 +85,7 @@ class ElEncuentro extends Component {
               Descripción del plato 1. Lorem ipsum dolor sit amet, consectetur
               adipiscing elit.
             </p>
-            <p class="price">$15.99</p>
+            <p className="price">$15.99</p>
           </div>
         </div>
 
@@ -99,7 +97,7 @@ class ElEncuentro extends Component {
               Descripción del plato 1. Lorem ipsum dolor sit amet, consectetur
               adipiscing elit.
             </p>
-            <p class="price">$15.99</p>
+            <p className="price">$15.99</p>
           </div>
         </div>
 
@@ -111,7 +109,7 @@ class ElEncuentro extends Component {
               Descripción del plato 1. Lorem ipsum dolor sit amet, consectetur
               adipiscing elit.
             </p>
-            <p class="price">$15.99</p>
+            <p className="price">$15.99</p>
           </div>
         </div>
 
@@ -123,7 +121,7 @@ class ElEncuentro extends Component {
               Descripción del plato 1. Lorem ipsum dolor sit amet, consectetur
               adipiscing elit.
             </p>
-            <p class="price">$15.99</p>
+            <p className="price">$15.99</p>
           </div>
         </div>
         </div>

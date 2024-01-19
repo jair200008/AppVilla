@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class Prueba extends Component{
+export default class Carrito extends Component{
 
     render(){
         return(
