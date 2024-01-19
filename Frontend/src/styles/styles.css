@@ -238,9 +238,8 @@ body {
     text-align: center;
 }
 .containerText h1{
-    margin-left: 15%;
     text-align: center;
-    margin-top: -550px;
+    margin-top: 15px;
 }
 
 /*Carrusel*/
@@ -320,10 +319,12 @@ body {
     background-color: rgb(240, 238, 237);
     padding: 20px;
     border-radius: 5px;
-    margin: 58px 5px;
+    margin: 78px 5px;
     max-width: 300px;
     border: #f8bb12 2px solid;
     color: black;
+    position: fixed;
+    z-index: 1000;
   }
 
   .filtro img{
@@ -591,8 +592,9 @@ nav.responsive ul li {
         padding: 10px;
         justify-content: space-between; /* Alinea los elementos a los extremos */
         display: flex; /* Muestra los elementos en forma de fila */
-        width: 500%; /* Ocupa el 100% del ancho de la pantalla */
-        z-index: 1000;
+        max-width: 100%; /* Ocupa el 100% del ancho de la pantalla */
+        position: relative;
+        z-index: 0;
       }
       .filtro img{
         display: none;

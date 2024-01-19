@@ -1,13 +1,14 @@
-// App.js
-import React, { useEffect } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import { gapi } from 'gapi-script';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Login from './components/login';
-import LoginES from './components/loginES';
-import Home from './components/home';
-import Error from './components/error';
-import FormRegister from './components/formRegister';
-import PageRestaurant from './components/restaurant/componentRestaurant';
+import './styles/styles.css'
+
+const LazyLogin = lazy(() => import('./components/login'));
+const LazyLoginES = lazy(() => import('./components/loginES'));
+const LazyHome = lazy(() => import('./components/home'));
+const LazyError = lazy(() => import('./components/error'));
+const LazyFormRegister = lazy(() => import('./components/formRegister'));
+const LazyPageRestaurant = lazy(() => import('./components/restaurant/componentRestaurant'));
 
 const clientId = "72464211646-0hiu8ls489tmfvm6dqcn8ut4323hrith.apps.googleusercontent.com";
 
@@ -29,12 +30,12 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/loginES" element={<LoginES />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/formRegister" element={<FormRegister />} />
-          <Route path="/componentRestaurant/*" element={<PageRestaurant />} />
-          <Route path="/error" element={<Error />} />
+          <Route path="/" element={<Suspense fallback={<div>Loading...</div>}><LazyLogin /></Suspense>} />
+          <Route path="/loginES" element={<Suspense fallback={<div>Loading...</div>}><LazyLoginES /></Suspense>} />
+          <Route path="/home" element={<Suspense fallback={<div>Loading...</div>}><LazyHome /></Suspense>} />
+          <Route path="/formRegister" element={<Suspense fallback={<div>Loading...</div>}><LazyFormRegister /></Suspense>} />
+          <Route path="/componentRestaurant/*" element={<Suspense fallback={<div>Loading...</div>}><LazyPageRestaurant /></Suspense>} />
+          <Route path="/error" element={<Suspense fallback={<div>Loading...</div>}><LazyError /></Suspense>} />
         </Routes>
       </Router>
     </div>

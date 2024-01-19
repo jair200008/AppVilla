@@ -67,7 +67,7 @@ class ElEncuentro extends Component {
           }
         >
           <img src="/img/tacos.jpg" alt="" />
-          <div className="menu-details">
+          <div className="menu-details" id="comidaRapida">
             <h2>Burritos Mexicanos</h2>
             <p>
               Descripción del plato 1. Lorem ipsum dolor sit amet, consectetur
@@ -89,7 +89,20 @@ class ElEncuentro extends Component {
           </div>
         </div>
 
-        <div className="menu-card">
+
+        <div className="menu-card" >
+          <img src="/img/hamburguesa.png" alt="" />
+          <div className="menu-details">
+            <h2>Name product</h2>
+            <p>
+              Descripción del plato 1. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit.
+            </p>
+            <p className="price">$15.99</p>
+          </div>
+        </div>
+
+        <div className="menu-card" id="comidaRapida">
           <img src="/img/pasta.jpg" alt="" />
           <div className="menu-details">
             <h2>Name product</h2>
@@ -113,8 +126,8 @@ class ElEncuentro extends Component {
           </div>
         </div>
 
-        <div className="menu-card">
-          <img src="/img/hamburguesa.png" alt="" />
+        <div className="menu-card" id="comidaRapida">
+          <img src="/img/pasta.jpg" alt="" />
           <div className="menu-details">
             <h2>Name product</h2>
             <p>
@@ -124,6 +137,20 @@ class ElEncuentro extends Component {
             <p className="price">$15.99</p>
           </div>
         </div>
+
+        <div className="menu-card">
+          <img src="/img/limonada.jpg" alt="" />
+          <div className="menu-details">
+            <h2>Name product</h2>
+            <p>
+              Descripción del plato 1. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit.
+            </p>
+            <p className="price">$15.99</p>
+          </div>
+        </div>
+
+
         </div>
         
 
