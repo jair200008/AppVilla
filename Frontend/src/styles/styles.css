@@ -319,7 +319,7 @@ body {
     background-color: rgb(240, 238, 237);
     padding: 20px;
     border-radius: 5px;
-    margin: 78px 5px;
+    margin: -1680px 5px;
     max-width: 300px;
     border: #f8bb12 2px solid;
     color: black;
@@ -407,6 +407,39 @@ body {
 
   button.add-to-cart {
     background-color: #27ae60;
+  }
+
+  /*Pagina para hacer las compras*/
+  .contentCarrito{
+    margin-top: 50px;
+  }
+  .producto {
+    width: 40%;
+    margin: 10px;
+    padding: 10px;
+    background-color: #dfdddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-items: center;
+  }
+
+  .producto img {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    margin-left: 50px;
+  }
+  .producto button{
+    background-color: #e74c3c;
+      color: #fff;
+      padding: 8px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+  .producto button:hover {
+    background-color: #c0392b;
   }
   
 @keyframes scroll {
@@ -569,6 +602,7 @@ nav.responsive ul li {
       /*Responsive targetas*/
       .menu-container{
         margin-left: 0%;
+        margin-top: 10px;
     }
       .menu-card {
         width: 90%;
@@ -586,7 +620,6 @@ nav.responsive ul li {
         overflow-x: auto;
       }
       .filtro{
-        margin-bottom: 10px;
         border: none;
         background-color: #fff;
         padding: 10px;
@@ -611,6 +644,19 @@ nav.responsive ul li {
         height: 30px;
         list-style-type: none;
       }
+
+      .containerText h1{
+        text-align: center;
+        margin-top: 90px;
+    }
+    .producto {
+      width: 90%;
+      padding: 5px;
+      background-color: #dfdddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      align-items: center;
+    }
 }
 
 @media screen and (max-width: 650px) {

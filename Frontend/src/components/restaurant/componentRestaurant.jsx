@@ -49,9 +49,7 @@ const PageRestaurant = () => {
           <FontAwesomeIcon icon={faBars} />
         </div>
       </div>
-        <div>
-          <Filtro></Filtro>
-        </div>
+
       <Routes>
         <Route path="/" element={<REncuentro />} />
         <Route path="/carrito" element={<Suspense fallback={<div>Loading...</div>}><Carrito /></Suspense>} />
